@@ -13,7 +13,7 @@ breakpoint_date = datetime(2021,1,15)
 color_dict = {'north':'pink', 'south':'yellow', 'east':'blue', 'west':'green'}
 
 app.layout = html.Div([
-    html.H1("Sales trend by region", style={'textAlign':'center', 'marginBottom':'30px'}),
+    html.H1("Sales Trend by region", style={'textAlign':'center', 'marginBottom':'30px'}),
     html.Div([
         dcc.RadioItems(
             id = 'region-selector',
@@ -67,6 +67,6 @@ def update_graph(selected_region):
     )
     return fig
 
-
+server = app.server
 if __name__ == '__main__':
     app.run(debug=True)
